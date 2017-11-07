@@ -51,6 +51,8 @@ function withWrapper(Cmp) {
 
                 this.props.staticContext.location = this.props.location;
 
+                this.props.staticContext.match = this.props.match;
+
                 if (Cmp.getInitialProps) {
                     this.props.staticContext.getInitialProps = Cmp.getInitialProps.bind(Cmp);
                 }

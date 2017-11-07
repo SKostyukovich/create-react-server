@@ -120,6 +120,7 @@ function middleware(options, template, req, res) {
         return (new Promise(function(resolve) {
             resolve((context.getInitialProps) ? context.getInitialProps({
                 location: context.location,
+                params: context.match.params,
                 req: req,
                 res: res,
                 store: context.store
